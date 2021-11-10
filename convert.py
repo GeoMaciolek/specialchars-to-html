@@ -30,7 +30,7 @@ def mapfile_to_mapdict(mapfile_filepath: str, json_encoding: str = 'utf-8') -> d
     return map_dict
 
 # Function to convert a CSV to JSON, Takes the file paths as arguments
-def csv_to_json_dict(csvFilePath, json_filepath, csv_encoding='utf-8'):
+def csv_to_json_dict(csvFilePath:str = 'html-replacement-v3.csv', json_filepath, csv_encoding='utf-8'):
     print(f"## Running csv_to_json_dict({csvFilePath=}, {json_filepath=}, {csv_encoding=})")
 
     # create a dictionary
@@ -65,15 +65,11 @@ def gen_outfilename(input_filename: str, suffix: str = '-processed', keep_extens
 def main(args):
 
     do_csv_convert = False
-
-    csv_mapping_file = 'html-replacement-v3.csv'
-    csv_encoding = 'utf-8'
-    # csv_encoding = 'iso8859-1'
-    # csv_encoding = 'cp1252'
     json_mapfile_filepath = 'chars-to-html-map.json'
 
     if do_csv_convert:
-        csv_to_json_dict(csv_mapping_file, json_mapfile_filepath, csv_encoding=csv_encoding)
+        # Has defaults specified for CSV file source & encoding
+        csv_to_json_dict(json_filepath=json_mapfile_filepath) 
 
     map_dict = mapfile_to_mapdict(json_mapfile_filepath)
 
