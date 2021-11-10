@@ -6,7 +6,7 @@ This tool converts special characters to their HTML versions, for example conver
 
 ## Help
 
-```
+```text
 usage: convert.py [-h] [--customsuffix CUSTOMSUFFIX] [--dropextension] [--displayonly] [--showfilename] [--debug]
                   source_file [source_file ...]
 
@@ -31,7 +31,7 @@ File Writing/Saving Options:
 Display / stdout:
   --displayonly, -d     Display the data only; do not write output files
   --showfilename, -n    Display the filename above the output (e.g. if processing multiple files)g. if processing multiple files)
-  ```
+```
 
 ## External Links & References
 

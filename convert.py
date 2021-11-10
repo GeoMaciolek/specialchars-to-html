@@ -140,7 +140,7 @@ def parse_args() -> dict:
                         help='The file(s) to process')
     
     write_grp = parser.add_argument_group(title='File Writing/Saving Options',
-                                          description='These options let you customize the file saving/naming behavior. If you wish to save with a custom filetype, combine --dropextension with --customsuffix')
+                                          description='These options let you customize the file saving/naming behavior.\n\nTo save with a custom filetype, combine --dropextension and --customsuffix')
     # write_grp.add_argument('--outfile','-f', help='OPTIONALLY set a custom target filename')
     write_grp.add_argument('--outpath','-o', help='Write files to the specified output location')
     write_grp.add_argument('--nosuffix','-S', action="store_true",
