@@ -1,0 +1,513 @@
+{
+    "\u00a9": {
+        "original": "\u00a9",
+        "replacement": "&#169;",
+        "description": "copyright",
+        "mac_keyboard_guide": "opt-g",
+        "automatic": "1"
+    },
+    "\u00ae": {
+        "original": "\u00ae",
+        "replacement": "&#174;",
+        "description": "reg tm",
+        "mac_keyboard_guide": "opt-r",
+        "automatic": "1"
+    },
+    "?": {
+        "original": "?",
+        "replacement": "<sup>1</sup>&frasl;<sub>10</su",
+        "description": "don't use messes w/ leading",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "\u00a2": {
+        "original": "\u00a2",
+        "replacement": "&#162;",
+        "description": "cents",
+        "mac_keyboard_guide": "opt-4",
+        "automatic": "1"
+    },
+    "\u00b0": {
+        "original": "\u00b0",
+        "replacement": "&#176;",
+        "description": "open bullet",
+        "mac_keyboard_guide": "opt-shift-8",
+        "automatic": "1"
+    },
+    "/": {
+        "original": "/",
+        "replacement": "&#47;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "\u00d6": {
+        "original": "\u00d6",
+        "replacement": "&#214;",
+        "description": "O umlaut",
+        "mac_keyboard_guide": "opt-u, then shift O",
+        "automatic": "1"
+    },
+    "\u00c2": {
+        "original": "\u00c2",
+        "replacement": "&#194;",
+        "description": "A cflex",
+        "mac_keyboard_guide": "opt-i, then shift A",
+        "automatic": "1"
+    },
+    "\u00e0": {
+        "original": "\u00e0",
+        "replacement": "&#224;",
+        "description": "a grave",
+        "mac_keyboard_guide": "opt-`, then a",
+        "automatic": "1"
+    },
+    "\u00e1": {
+        "original": "\u00e1",
+        "replacement": "&#225;",
+        "description": "a acute",
+        "mac_keyboard_guide": "opt-e, then a",
+        "automatic": "1"
+    },
+    "\u00e2": {
+        "original": "\u00e2",
+        "replacement": "&#226;",
+        "description": "a cflex",
+        "mac_keyboard_guide": "opt-i, then a",
+        "automatic": "1"
+    },
+    "\u00e4": {
+        "original": "\u00e4",
+        "replacement": "&#228;",
+        "description": "a umlaut",
+        "mac_keyboard_guide": "opt-u, then a",
+        "automatic": "1"
+    },
+    "\u00e8": {
+        "original": "\u00e8",
+        "replacement": "&#232;",
+        "description": "e grave",
+        "mac_keyboard_guide": "opt-`, then e",
+        "automatic": "1"
+    },
+    "\u00e9": {
+        "original": "\u00e9",
+        "replacement": "&#233;",
+        "description": "e acute",
+        "mac_keyboard_guide": "opt-e, then e",
+        "automatic": "1"
+    },
+    "\u00c9": {
+        "original": "\u00c9",
+        "replacement": "&#201;",
+        "description": "E acute",
+        "mac_keyboard_guide": "opt-e, then shift E",
+        "automatic": "1"
+    },
+    "\u00ea": {
+        "original": "\u00ea",
+        "replacement": "&#234;",
+        "description": "e cflex",
+        "mac_keyboard_guide": "opt-i, then e",
+        "automatic": "1"
+    },
+    "\u00ed": {
+        "original": "\u00ed",
+        "replacement": "&#237;",
+        "description": "i acute",
+        "mac_keyboard_guide": "opt-e, then i",
+        "automatic": "1"
+    },
+    "\u00ee": {
+        "original": "\u00ee",
+        "replacement": "&#238;",
+        "description": "i cflex",
+        "mac_keyboard_guide": "opt-i, then i",
+        "automatic": "1"
+    },
+    "\u00f1": {
+        "original": "\u00f1",
+        "replacement": "&#241;",
+        "description": "e\u00f1e",
+        "mac_keyboard_guide": "opt-n, then n",
+        "automatic": "1"
+    },
+    "\u00f3": {
+        "original": "\u00f3",
+        "replacement": "&#243;",
+        "description": "o acute",
+        "mac_keyboard_guide": "opt-e, then o",
+        "automatic": "1"
+    },
+    "\u00f4": {
+        "original": "\u00f4",
+        "replacement": "&#244;",
+        "description": "o cflex",
+        "mac_keyboard_guide": "opt-i, then o",
+        "automatic": "1"
+    },
+    "\u00f6": {
+        "original": "\u00f6",
+        "replacement": "&#246;",
+        "description": "o umlaut",
+        "mac_keyboard_guide": "opt-u, then o",
+        "automatic": "1"
+    },
+    "\u00fb": {
+        "original": "\u00fb",
+        "replacement": "&#251;",
+        "description": "u cflex",
+        "mac_keyboard_guide": "opt-i, then u",
+        "automatic": "1"
+    },
+    "\u00fc": {
+        "original": "\u00fc",
+        "replacement": "&#252;",
+        "description": "u umlaut",
+        "mac_keyboard_guide": "opt-u, then u",
+        "automatic": "1"
+    },
+    "\"": {
+        "original": "\"",
+        "replacement": "&#34;",
+        "description": "inches",
+        "mac_keyboard_guide": "shift-'",
+        "automatic": "1"
+    },
+    "\u2013": {
+        "original": "\u2013",
+        "replacement": "&#8211;",
+        "description": "en dash",
+        "mac_keyboard_guide": "opt-dash",
+        "automatic": "1"
+    },
+    "\u2014": {
+        "original": "\u2014",
+        "replacement": "&#8212;",
+        "description": "em dash",
+        "mac_keyboard_guide": "opt-shift-dash",
+        "automatic": "1"
+    },
+    "\u2018": {
+        "original": "\u2018",
+        "replacement": "&#8216;",
+        "description": "open single",
+        "mac_keyboard_guide": "opt-]",
+        "automatic": "1"
+    },
+    "\u2019": {
+        "original": "\u2019",
+        "replacement": "&#8217;",
+        "description": "close single",
+        "mac_keyboard_guide": "opt-shift-]",
+        "automatic": "1"
+    },
+    "\u201c": {
+        "original": "\u201c",
+        "replacement": "&#8220;",
+        "description": "open double",
+        "mac_keyboard_guide": "opt-[",
+        "automatic": "1"
+    },
+    "\u201d": {
+        "original": "\u201d",
+        "replacement": "&#8221;",
+        "description": "close double",
+        "mac_keyboard_guide": "opt-shift-[",
+        "automatic": "1"
+    },
+    "\u2021": {
+        "original": "\u2021",
+        "replacement": "&#8225;",
+        "description": "double dagger",
+        "mac_keyboard_guide": "opt-shift-7",
+        "automatic": "1"
+    },
+    "\u2022": {
+        "original": "\u2022",
+        "replacement": "&#8226;",
+        "description": "bullet",
+        "mac_keyboard_guide": "opt-8",
+        "automatic": "1"
+    },
+    "\u00ab": {
+        "original": "\u00ab",
+        "replacement": "&#171;",
+        "description": "open angles",
+        "mac_keyboard_guide": "opt-\\",
+        "automatic": "1"
+    },
+    "\u00bb": {
+        "original": "\u00bb",
+        "replacement": "&#187;",
+        "description": "close angles",
+        "mac_keyboard_guide": "opt-shift-\\",
+        "automatic": "1"
+    },
+    "\u2026": {
+        "original": "\u2026",
+        "replacement": "&#8230;",
+        "description": "ellipsis",
+        "mac_keyboard_guide": "opt-;",
+        "automatic": "1"
+    },
+    "...": {
+        "original": "...",
+        "replacement": "&#8230;",
+        "description": "3 periods",
+        "mac_keyboard_guide": "3 periods",
+        "automatic": "0"
+    },
+    "\u2122": {
+        "original": "\u2122",
+        "replacement": "&#8482;",
+        "description": "tm",
+        "mac_keyboard_guide": "opt-2",
+        "automatic": "1"
+    },
+    "\u00e6": {
+        "original": "\u00e6",
+        "replacement": "&aelig; or &#230;",
+        "description": "ae ligature",
+        "mac_keyboard_guide": "opt-'",
+        "automatic": "1"
+    },
+    "\u0153": {
+        "original": "\u0153",
+        "replacement": "&#339;",
+        "description": "oe ligature",
+        "mac_keyboard_guide": "opt-q",
+        "automatic": "1"
+    },
+    "BACK!": {
+        "original": "BACK!",
+        "replacement": "<strong>BACK!</strong>",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "NEW!": {
+        "original": "NEW!",
+        "replacement": "<strong>NEW!</strong>",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "~": {
+        "original": "~",
+        "replacement": "&#126;",
+        "description": "tilde",
+        "mac_keyboard_guide": "shift-`",
+        "automatic": "1"
+    },
+    "\u00bc": {
+        "original": "\u00bc",
+        "replacement": "&#188;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u00bd": {
+        "original": "\u00bd",
+        "replacement": "&#189;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u00be": {
+        "original": "\u00be",
+        "replacement": "&#190;",
+        "description": "do not ReplaceAll Z3/4 Trees",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "\u215b": {
+        "original": "\u215b",
+        "replacement": "&#8539;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u215c": {
+        "original": "\u215c",
+        "replacement": "&#8540;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u215d": {
+        "original": "\u215d",
+        "replacement": "&#8541;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u215e": {
+        "original": "\u215e",
+        "replacement": "&#8542;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    ",": {
+        "original": ",",
+        "replacement": "&#44;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "\u2153": {
+        "original": "\u2153",
+        "replacement": "&#8531;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u2154": {
+        "original": "\u2154",
+        "replacement": "&#8532;",
+        "description": "d not ReplaceAll 2/3 eyes Bulbs",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "\u2155": {
+        "original": "\u2155",
+        "replacement": "&#8533;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u2156": {
+        "original": "\u2156",
+        "replacement": "&#8534;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u2157": {
+        "original": "\u2157",
+        "replacement": "&#8535;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u2158": {
+        "original": "\u2158",
+        "replacement": "&#8536;",
+        "description": "do not ReplaceAll Z4/5 Trees",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "\u2159": {
+        "original": "\u2159",
+        "replacement": "&#8537;",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "1"
+    },
+    "\u215a": {
+        "original": "\u215a",
+        "replacement": "&#8538;",
+        "description": "do not ReplaceAll Z5/6 Trees",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "\u2460": {
+        "original": "\u2460",
+        "replacement": "&#9312;",
+        "description": "small seed Fedco",
+        "mac_keyboard_guide": "opt-shift-? \u00bf",
+        "automatic": "0"
+    },
+    "\u2461": {
+        "original": "\u2461",
+        "replacement": "&#9313;",
+        "description": "family",
+        "mac_keyboard_guide": "opt-1(one) \u00a1",
+        "automatic": "0"
+    },
+    "\u2462": {
+        "original": "\u2462",
+        "replacement": "&#9314;",
+        "description": "not conglom",
+        "mac_keyboard_guide": "opt-l (ell) \u00ac",
+        "automatic": "0"
+    },
+    "\u2463": {
+        "original": "\u2463",
+        "replacement": "&#9315;",
+        "description": "multi no GE",
+        "mac_keyboard_guide": "opt-v ?",
+        "automatic": "0"
+    },
+    "\u2464": {
+        "original": "\u2464",
+        "replacement": "&#9316;",
+        "description": "multi GE",
+        "mac_keyboard_guide": "opt-f \u0192",
+        "automatic": "0"
+    },
+    "\u2465": {
+        "original": "\u2465",
+        "replacement": "&#9317;",
+        "description": "Syngenta",
+        "mac_keyboard_guide": "opt-x ?",
+        "automatic": "0"
+    },
+    "&": {
+        "original": "&",
+        "replacement": "&#38;",
+        "description": "ampersand",
+        "mac_keyboard_guide": "shift-7",
+        "automatic": "0"
+    },
+    "{ }": {
+        "original": "{ }",
+        "replacement": "shift-[",
+        "description": "braces",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "[ ]": {
+        "original": "[ ]",
+        "replacement": "[",
+        "description": "brackets",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "PVP": {
+        "original": "PVP",
+        "replacement": "",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "AAS": {
+        "original": "AAS",
+        "replacement": "",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "Fedco": {
+        "original": "Fedco",
+        "replacement": "",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "OSSI": {
+        "original": "OSSI",
+        "replacement": "",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    },
+    "ME": {
+        "original": "ME",
+        "replacement": "<strong>Maine Grown</strong>",
+        "description": "",
+        "mac_keyboard_guide": "",
+        "automatic": "0"
+    }
+}

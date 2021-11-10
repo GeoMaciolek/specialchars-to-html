@@ -1,0 +1,25 @@
+- &#8537;
+- &#8537;
+
+This text has ⅙ some unusual characters in it; fractions like ⅙ and ⅚.
+
+It also has ampersands and GT/LT, like <&> - all in a row!
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+Whaa? Et blanditiis, Brute?
+Neque ⅙ inventore explicabo quod vitae repellendus consectetur labore delectus possimus, et blanditiis?
+
+Neque vitae repellendus consectetur delectus possimus, et blanditiis?
+
+Lorem ⅙ ipsum dolor sit, amet consectetur ⅙ adipisicing ⅙ elit.
+Neque  inventore explicabo quod vitae repellendus consectetur,
+labore delectus possimus, et blanditiis?
+Whaa? Et blanditiis, Brute? ⅚ Est ito lol.
+
+Neque vitae repellendus consectetur delectus possimus, et blanditiis?
+
+
+It also has ⅙ ampersands and GT/LT, like <&> - all in a row!
+These are some circled numbers: ① ② ③ ④ 
+
+And some more ...② ③ ④

@@ -1,0 +1,78 @@
+original,replacement,description,mac_keyboard_guide,automatic
+©,&#169;,copyright,opt-g,1
+®,&#174;,reg tm,opt-r,1
+?,&# 937; or Seeds spantag,omega,opt-z,1
+?,&# 937;,omega,opt-z,1
+¢,&#162;,cents,opt-4,1
+?,&#176;,degrees,opt-k,1
+°,&#176;,open bullet,opt-shift-8,1
+/,/ use regular slash not /,fraction slash,opt-shift-!,1
+Ö,&#214;,O umlaut,"opt-u, then shift O",1
+Â,&#194;,A cflex,"opt-i, then shift A",1
+à,&#224;,a grave,"opt-`, then a",1
+á,&#225;,a acute,"opt-e, then a",1
+â,&#226;,a cflex,"opt-i, then a",1
+ä,&#228;,a umlaut,"opt-u, then a",1
+è,&#232;,e grave,"opt-`, then e",1
+é,&#233;,e acute,"opt-e, then e",1
+É,&#201;,E acute,"opt-e, then shift E",1
+ê,&#234;,e cflex,"opt-i, then e",1
+í,&#237;,i acute,"opt-e, then i",1
+î,&#238;,i cflex,"opt-i, then i",1
+ñ,&#241;,eñe,"opt-n, then n",1
+ó,&#243;,o acute,"opt-e, then o",1
+ô,&#244;,o cflex,"opt-i, then o",1
+ö,&#246;,o umlaut,"opt-u, then o",1
+û,&#251;,u cflex,"opt-i, then u",1
+ü,&#252;,u umlaut,"opt-u, then u",1
+"""",&#34;,inches,shift-',1
+–,&#8211;,en dash,opt-dash,1
+—,&#8212;,em dash,opt-shift-dash,1
+‘,&#8216;,open single,opt-],1
+’,&#8217;,close single,opt-shift-],1
+“,&#8220;,open double,opt-[,1
+”,&#8221;,close double,opt-shift-[,1
+‡,&#8225;,double dagger,opt-shift-7,1
+•,&#8226;,bullet,opt-8,1
+«,&#171;,open angles,opt-\,1
+»,&#187;,close angles,opt-shift-\,1
+…,&#8230;,ellipsis,opt-;,1
+...,&#8230;,3 periods,3 periods,0
+™,&#8482;,tm,opt-2,1
+æ,&aelig; or &#230;,ae ligature,opt-',1
+œ,&#339;,oe ligature,opt-q,1
+BACK!,<strong>BACK!</strong>,,,1
+NEW!,<strong>NEW!</strong>,,,1
+~,&#126;,tilde,shift-`,1
+¼,&#188;,,,1
+½,&#189;,,,1
+¾,&#190;,do not ReplaceAll Z3/4 Trees,,0
+⅛,&#8539;,,,1
+⅜,&#8540;,,,1
+⅝,&#8541;,,,1
+⅞,&#8542;,,,1
+?,<sup>1</sup>&frasl;<sub>10</su,don't use messes w/ leading,,0
+/,&#47;,,,0
+",",&#44;,,,0
+⅓,&#8531;,,,1
+⅔,&#8532;,d not ReplaceAll 2/3 eyes Bulbs,,0
+⅕,&#8533;,,,1
+⅖,&#8534;,,,1
+⅗,&#8535;,,,1
+⅘,&#8536;,do not ReplaceAll Z4/5 Trees,,0
+⅙,&#8537;,,,1
+⅚,&#8538;,do not ReplaceAll Z5/6 Trees,,0
+①,&#9312;,small seed Fedco,opt-shift-? ¿,0
+②,&#9313;,family,opt-1(one) ¡,0
+③,&#9314;,not conglom,opt-l (ell) ¬,0
+④,&#9315;,multi no GE,opt-v ?,0
+⑤,&#9316;,multi GE,opt-f ƒ,0
+⑥,&#9317;,Syngenta,opt-x ?,0
+&,&#38;,ampersand,shift-7,0
+{ },shift-[,braces,,0
+[ ],[,brackets,,0
+PVP,,,,0
+AAS,,,,0
+Fedco,,,,0
+OSSI,,,,0
+ME,<strong>Maine Grown</strong>,,,0
