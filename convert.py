@@ -65,7 +65,11 @@ def gen_outfilename(input_filename: str, suffix: str = '-processed', keep_extens
 def main(args):
 
     do_csv_convert = False
-    json_mapfile_filepath = 'chars-to-html-map.json'
+
+    if args.jsonmappingfile:
+        json_mapfile_filepath = args.jsonmappingfile
+    else:
+        json_mapfile_filepath = 'chars-to-html-map.json'
 
     if do_csv_convert:
         # Has defaults specified for CSV file source & encoding
@@ -152,7 +156,9 @@ def parse_args() -> dict:
     output_group.add_argument('--showfilename','-n', action="store_true",
                               help='Display the filename above the output (e.g. if processing multiple files)')
 
-    parser.add_argument('--debug', action="store_true", help='Display debugging information')
+    advanced_group = parser.add_argument_group(title='Advanced & Development Settings')
+    advanced_group.add_argument('--debug', action="store_true", help='Display debugging information')
+    advanced_group.add_argument('--jsonmappingfile', help='Specify a JSON map file')
 
     args = parser.parse_args()
     if args.customsuffix and args.nosuffix:
