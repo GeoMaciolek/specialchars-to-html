@@ -70,7 +70,7 @@ def main(args):
     csv_encoding = 'utf-8'
     # csv_encoding = 'iso8859-1'
     # csv_encoding = 'cp1252'
-    json_mapfile_filepath = 'html-replace-v3.json'
+    json_mapfile_filepath = 'chars-to-html-map.json'
 
     if do_csv_convert:
         csv_to_json_dict(csv_mapping_file, json_mapfile_filepath, csv_encoding=csv_encoding)
