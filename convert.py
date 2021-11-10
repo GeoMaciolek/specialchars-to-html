@@ -1,6 +1,7 @@
 import csv
 import json
 import os.path
+import sys
 # import pathlib
 from pprint import pprint
 import argparse
@@ -56,7 +57,7 @@ def gen_outfilename(input_filename: str, suffix: str = '-processed', keep_extens
     # Grab "base" of filename without extension
     new_filename = os.path.splitext(input_filename)[0] + suffix
     if keep_extension:
-        new_filename += os.path.splitext(input_filename)[0]
+        new_filename += os.path.splitext(input_filename)[1]
     
     return new_filename
 
@@ -92,30 +93,50 @@ def main(args):
                     print(f'[ {source_file.name} ]')
                 print(remapped_string)
             else:
-                with open('test-out-converted.txt','w') as out_file:
-                    out_file.write(remapped_string)
-
-
+                out_opts = {}
+                out_opts['keep_extension'] = not args.dropextension
+                if args.customsuffix:
+                    out_opts['suffix'] = args.customsuffix
+                out_filename = gen_outfilename(source_file.name, **out_opts)
+                print(f'WOULD SAVE TO A FILE NAMED: {out_filename}')
+                # with open('test-out-converted.txt','w') as out_file:
+                #     out_file.write(remapped_string)
 
     # # pprint(map_dict)
     # pprint(remapped_string)
-    # print('done!')
+
+class MyParser(argparse.ArgumentParser):
+    def error(self, message):
+        sys.stderr.write(f'error: {message}\n\n')
+        self.print_help()
+        # sys.stderr.write(f'error: {message}\n\nTry running with --help')
+        sys.exit(2)
 
 def parse_args() -> dict:
     help_text = """
     This tool converts special characters to their HTML versions, e.g. &#1234;.
     The output file(s) will be saved as filename-processed.txt.
     """
-    parser = argparse.ArgumentParser(description='HTML Processor')
+    # parser = argparse.ArgumentParser(description='HTML Processor')
+    parser = MyParser(description='Special character to HTML processor')
     # parser.add_argument('source_file', help='The file to process,')
     parser.add_argument('source_file', type=argparse.FileType('r'), nargs='+',
                         help='The file(s) to process')
-    parser.add_argument('--debug', action="store_true", help='Display debugging information')
+    
+    write_grp = parser.add_argument_group(title='File Writing/Saving Options',
+                                          description='These options let you customize the file saving/naming behavior. If you wish to save with a custom filetype, combine --dropextension with --customsuffix')
+    # write_grp.add_argument('--outfile','-f', help='OPTIONALLY set a custom target filename')
+    write_grp.add_argument('--customsuffix','-s', help='Set a custom suffix to add to the file when saving')
+    write_grp.add_argument('--dropextension','-x', action="store_true",
+                                    help='Set a custom suffix to add to the file when saving')
+
     output_group = parser.add_argument_group(title='Display / stdout')
-    output_group.add_argument('--displayonly', action="store_true",
+    output_group.add_argument('--displayonly','-d', action="store_true",
                               help='Display the data only; do not write output files')
-    output_group.add_argument('--showfilename', action="store_true",
+    output_group.add_argument('--showfilename','-n', action="store_true",
                               help='Display the filename above the output (e.g. if processing multiple files)')
+
+    parser.add_argument('--debug', action="store_true", help='Display debugging information')
 
     args = parser.parse_args()
     return args
