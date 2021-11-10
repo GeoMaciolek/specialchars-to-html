@@ -3,10 +3,25 @@
 ## Overview
 
 This tool converts special characters to their HTML versions, for example
-converting &#339; to the string `&#339;`. The output file(s) are saved - by
+converting "&#339;" to the string `&#339;`. The output file(s) are saved - by
 default - a filename-processed.txt (keeping the original extension).
 
-## Help
+## Usage
+
+This requires only a standard installation of Python 3. For help, see the
+[Python-Guide.com](https://docs.python-guide.org/starting/installation/).
+
+Once Python is installed, download the contents of this repository (either via)
+`git clone` or downloading the ZIP from the green "CODE" button dropdown.
+
+Then, go to that directory in your command prompt / terminal; run as follows:
+
+```bash
+cd ~/Downloads/specialchars-to-html  # Or whatever the download path is
+python3 convert.py ~/path/to/source-file.txt # Sometimes "python", not "python3"
+```
+
+### Usage Example
 
 ```text
 usage: convert.py [-h] [--outpath OUTPATH] [--nosuffix] [--debug]
