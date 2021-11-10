@@ -115,10 +115,10 @@ class MyParser(argparse.ArgumentParser):
 def parse_args() -> dict:
     help_text = """
     This tool converts special characters to their HTML versions, e.g. &#1234;.
-    The output file(s) will be saved as filename-processed.txt.
+    The output file(s) are saved - by default - a filename-processed.txt (keeping the original extension).
     """
     # parser = argparse.ArgumentParser(description='HTML Processor')
-    parser = MyParser(description='Special character to HTML processor')
+    parser = MyParser(description='Special character to HTML processor. ' + help_text)
     # parser.add_argument('source_file', help='The file to process,')
     parser.add_argument('source_file', type=argparse.FileType('r'), nargs='+',
                         help='The file(s) to process')
