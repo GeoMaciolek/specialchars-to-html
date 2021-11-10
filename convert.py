@@ -98,9 +98,8 @@ def main(args):
                 if args.customsuffix:
                     out_opts['suffix'] = args.customsuffix
                 out_filename = gen_outfilename(source_file.name, **out_opts)
-                print(f'WOULD SAVE TO A FILE NAMED: {out_filename}')
-                # with open('test-out-converted.txt','w') as out_file:
-                #     out_file.write(remapped_string)
+                with open(out_filename, 'w') as out_file:
+                    out_file.write(remapped_string)
 
     # # pprint(map_dict)
     # pprint(remapped_string)
