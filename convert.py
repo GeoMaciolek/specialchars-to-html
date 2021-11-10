@@ -52,13 +52,14 @@ def csv_to_json_dict(csvFilePath, json_filepath, csv_encoding='utf-8'):
     with open(json_filepath, 'w', encoding='utf-8') as json_file:
         json_file.write(json.dumps(data, indent=4))
 
-def gen_outfilename(input_filename: str, suffix: str = '-processed', keep_extension: bool = True) -> str:
+def gen_outfilename(input_filename: str, suffix: str = '-processed', keep_extension: bool = True, output_path: str = None) -> str:
 
     # Grab "base" of filename without extension
     new_filename = os.path.splitext(input_filename)[0] + suffix
     if keep_extension:
         new_filename += os.path.splitext(input_filename)[1]
-    
+    if output_path:
+        new_filename = os.path.join(output_path, os.path.basename(new_filename))
     return new_filename
 
 def main(args):
@@ -78,8 +79,6 @@ def main(args):
 
     for source_file in args.source_file:
 
-        # with open(source_file,'r', encoding='utf-8') as source_fileobj:
-            # source_string = source_fileobj.read()
             source_string = source_file.read()
 
             remapped_string = replace_strings_mapdict(source_string, map_dict)
@@ -97,7 +96,13 @@ def main(args):
                 out_opts['keep_extension'] = not args.dropextension
                 if args.customsuffix:
                     out_opts['suffix'] = args.customsuffix
+                if args.nosuffix:
+                    out_opts['suffix'] = ''
+                if args.outpath:
+                    out_opts['output_path'] = args.outpath
                 out_filename = gen_outfilename(source_file.name, **out_opts)
+                if out_filename == source_file.name:
+                    raise FileExistsError(f'File {out_filename} Already Exists!')
                 with open(out_filename, 'w') as out_file:
                     out_file.write(remapped_string)
 
@@ -116,8 +121,20 @@ def parse_args() -> dict:
     This tool converts special characters to their HTML versions, e.g. &#1234;.
     The output file(s) are saved - by default - a filename-processed.txt (keeping the original extension).
     """
+
+    usage_examples = f"""
+    \nUsage Examples:
+
+    {sys.argv[0]} -S example-file.md
+        Processes "example-file.md" and saves as "example-file-processed.md" in the same directory as the source.
+
+    {sys.argv[0]} -S -o out/ some-file.txt
+        Saves processed files to path "out/" with identical names to input files)
+    """
     # parser = argparse.ArgumentParser(description='HTML Processor')
-    parser = MyParser(description='Special character to HTML processor. ' + help_text)
+    parser = MyParser(formatter_class=argparse.RawDescriptionHelpFormatter,
+                      description='"Special character" to HTML processor. ' + help_text,
+                      epilog=usage_examples)
     # parser.add_argument('source_file', help='The file to process,')
     parser.add_argument('source_file', type=argparse.FileType('r'), nargs='+',
                         help='The file(s) to process')
@@ -125,9 +142,13 @@ def parse_args() -> dict:
     write_grp = parser.add_argument_group(title='File Writing/Saving Options',
                                           description='These options let you customize the file saving/naming behavior. If you wish to save with a custom filetype, combine --dropextension with --customsuffix')
     # write_grp.add_argument('--outfile','-f', help='OPTIONALLY set a custom target filename')
-    write_grp.add_argument('--customsuffix','-s', help='Set a custom suffix to add to the file when saving')
+    write_grp.add_argument('--outpath','-o', help='Write files to the specified output location')
+    write_grp.add_argument('--nosuffix','-S', action="store_true",
+                           help='Do not add "-processed" to the file name. Use with e.g. --outpath)')
+    write_grp.add_argument('--customsuffix','-s', help='Set a custom suffix to add to the file when saving.')
     write_grp.add_argument('--dropextension','-x', action="store_true",
-                                    help='Set a custom suffix to add to the file when saving')
+                           help='Drop the existing file extension')
+    # write_grp.add_mutually_exclusive_group()
 
     output_group = parser.add_argument_group(title='Display / stdout')
     output_group.add_argument('--displayonly','-d', action="store_true",
@@ -138,6 +159,8 @@ def parse_args() -> dict:
     parser.add_argument('--debug', action="store_true", help='Display debugging information')
 
     args = parser.parse_args()
+    if args.customsuffix and args.nosuffix:
+        argparse.ArgumentParser.exit(status=1,message='Cannot combine --customsuffix with --nosuffix')
     return args
 
 # Main - boilerplate plus argparse
