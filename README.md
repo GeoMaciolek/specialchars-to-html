@@ -105,7 +105,16 @@ results.
 ```bash
 # BEST: Shows all lines with upper ascii / funky character
 # Note: may require use without the -P on OSX
+
+# Just show the item name & ID
+grep -P '[^\x00-\x7f]' some-source-file-lf.tsv | cut -d$'\t' -f1,3
+
+# Long output (all fields / data) with spacing for readability
+grep -P '[^\x00-\x7f]' some-source-file-lf.tsv | sed -z 's/\n/\n\n/g'
+
+# Simple version (LONG output)
 grep -P '[^\x00-\x7f]' some-source-file-lf.tsv
+
 
 ### Below are some older versions and versions that select specific data
 
