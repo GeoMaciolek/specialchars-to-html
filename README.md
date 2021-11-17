@@ -103,18 +103,29 @@ Otherwise, grep will not know where line endings are, and you'll get useless
 results.
 
 ```bash
+# BEST: Shows all lines with upper ascii / funky character
+# Note: may require use without the -P on OSX
+grep -P '[^\x00-\x7f]' some-source-file-lf.tsv
+
+### Below are some older versions and versions that select specific data
+
 # Shows all lines (prefixed with line numbers) with upper ascii
-grep -anP '[\x80-\xFF]' some-source-file.tsv
+grep -anP '[\x80-\xFF]' some-source-file-lf.tsv
 
 # Shows only the first chunks of data, to make it easier to read
 # (splits on tabs) - add ",5" to the end to get the whole description
-grep -anP '[\x80-\xFF]' some-source-file.tsv | cut -d$'\t' -f 1-3
+grep -anP '[\x80-\xFF]' some-source-file-lf.tsv | cut -d$'\t' -f 1-3
 
 # Find othr stuff that may not appear above: check if your locale is UTF-8
 locale
 
-# grep - 
-grep -avx '.*' a-file-with-greminls.tsv-lf
+# grep -  using unicode locale
+grep -avx '.*' some-source-file-lf.tsv
+
+# ASSORTED NOTES DO NOT USE
+
+# nonascii() { LANG=C grep -P --color=always '[^\x00-\x7f]'; }
+# cat file | nonascii()
 ```
 
 ## External Links & References
