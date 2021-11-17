@@ -69,6 +69,54 @@ Usage Examples:
         Saves processed files to path "out/" w/identical names to input files)
 ```
 
+#### Converting Line Endings
+
+This may be needed in soem circumstances - determine if this is the case with
+the `file` command - you should have CRLF and UTF-8, not CR and ASCII
+
+```bash
+# Install "dos2unix" - like "brew install dos2unix" ?
+
+# mac2unix will convert the "CR" (carriage-return) at the end of each file
+# to "LF" (linefeed) - the unix standard.  This is useful even just to do
+# examinations of the files, as shown around "Tracking Down Gremlins"
+
+mac2unix < source-file.tsv > file-with-lf.tsv
+unix2dos < file-with-lf.tsv > file-with-crlf.tsv
+
+# from inside the convert util path!
+mkdir out/
+python3 convert.py -S file-with-lf.tsv -o out/
+
+unix2dos < out/file-with-lf.tsv > file-with-new-chars-and-crlf.tsv
+```
+
+#### Tracking Down Gremlins
+
+Amont other things, VSCode with the "gremins" extension can help.
+
+To find all "upper ascii" (as in, not normal text) characters in a file. This
+can be run in bash (in the "Terminal" on a Mac, for example).
+
+Note: You may want to ensure the files have LF endings; see mac2unix above.
+Otherwise, grep will not know where line endings are, and you'll get useless
+results.
+
+```bash
+# Shows all lines (prefixed with line numbers) with upper ascii
+grep -anP '[\x80-\xFF]' some-source-file.tsv
+
+# Shows only the first chunks of data, to make it easier to read
+# (splits on tabs) - add ",5" to the end to get the whole description
+grep -anP '[\x80-\xFF]' some-source-file.tsv | cut -d$'\t' -f 1-3
+
+# Find othr stuff that may not appear above: check if your locale is UTF-8
+locale
+
+# grep - 
+grep -avx '.*' a-file-with-greminls.tsv-lf
+```
+
 ## External Links & References
 
 - [HTML Entities](https://www.w3.org/TR/html4/sgml/entities.html)
