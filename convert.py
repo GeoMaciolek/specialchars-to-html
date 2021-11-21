@@ -30,7 +30,7 @@ def mapfile_to_mapdict(mapfile_filepath: str, json_encoding: str = 'utf-8') -> d
     return map_dict
 
 # Function to convert a CSV to JSON, Takes the file paths as arguments
-def csv_to_json_dict(csvFilePath:str = 'html-replacement-v3.csv', json_filepath, csv_encoding='utf-8'):
+def csv_to_json_dict(json_filepath, csvFilePath: str = 'html-replacement-v3.csv',  csv_encoding='utf-8'):
     print(f"## Running csv_to_json_dict({csvFilePath=}, {json_filepath=}, {csv_encoding=})")
 
     # create a dictionary
@@ -125,11 +125,11 @@ def parse_args() -> dict:
     usage_examples = f"""
     \nUsage Examples:
 
-    {sys.argv[0]} -S example-file.md
+    {sys.argv[0]} example-file.md
         Processes "example-file.md" and saves as "example-file-processed.md" in the same directory as the source.
 
     {sys.argv[0]} -S -o out/ some-file.txt
-        Saves processed files to path "out/" with identical names to input files)
+        Saves processed files to path "out/" w/identical names to input files)
     """
     # parser = argparse.ArgumentParser(description='HTML Processor')
     parser = MyParser(formatter_class=argparse.RawDescriptionHelpFormatter,
